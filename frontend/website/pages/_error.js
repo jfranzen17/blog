@@ -2,6 +2,7 @@ import { Component } from "react"
 
 import Header from "../components/header.js"
 import Footer from "../components/footer.js"
+import HeadMetaData from "../components/headMetaData.js"
 
 export default class extends Component {
   static getInitialProps({ req, res, err }) {
@@ -15,6 +16,7 @@ export default class extends Component {
   render () {
     return (
       <div className="layout-wrapper">
+        <HeadMetaData title="Error" />
         <Header />
         <div className="error-container">
           {
