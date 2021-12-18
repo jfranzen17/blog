@@ -2,92 +2,135 @@
     min-height: calc(100vh - (85px + 225px));
     margin-top: 80px;
     margin-bottom: 40px;
+    padding-top: 60px;
+  }
+
+  *{
+    box-sizing:border-box;
+  }
+  body{
+    width:100vw;
+    height:100vh;
+    background:radial-gradient(#ccc 20%, #f0f0f0 100%);
+    background-color: #DCD5C6;
+    background-image:url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+  }
+  .envelope{
+    width:500px;
+    height:300px;
+    background-color:#50748B;
+    margin:30% auto;
+    position:relative;
+    cursor:pointer;
+    z-index:1;
+  }
+  .envelope:before{
+    content:"";
+    top:0;
+    right:0;
+    z-index:3;
+    position:absolute;
+    border-left:500px solid transparent;
+    border-bottom:300px solid #4686A9;
+  }
+  .envelope:after{
+    content:"";
+    top:0;
+    left:0;
+    z-index:3;
+    position:absolute;
+    border-right:500px solid transparent;
+    border-bottom:300px solid #4686A9;
+  }
+  .back{
+    position:absolute;
+    top:0;
+    z-index:-1;
+    transform-origin:top;
+    border-top:150px solid #4686A9;
+    border-left:250px solid transparent;
+    border-right:250px solid transparent;
+    transition: all 1s ease-in-out;
+    transform: rotateX(180deg);
+  }
+  .letter{
+    position:relative;
+    top:0;
+    padding:20px 10px;
+    width:400px;
+    height:200px;
+    overflow:hidden;
+    z-index:2;
+    margin: 0 auto;
+    background-color:#F1EBE3;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    transition: all 1s ease-in-out;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+      -moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
+      -webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+  }
+  label{
+    color: #000000;
+    margin:0 20px;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #fff;
+    font-size: 13px;
+  }
+  input,textarea{
+    width: 90%;
+    height:35px;
+    display:block;
+    margin: 5px auto;
+    padding:5px;
+    background:none;
+    outline:  none;
+    color: #000000;
+    border: 1px solid #f8f5f1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: inset 0px 0px 1px #726959;
+    -webkit-box-shadow: inset 0px 0px 1px #b3a895;
+    box-shadow: inset 0px 0px 1px #b3a895;
+  }
+  textarea{
+    height:105px;
+    max-height:105px;
+    max-width:90%;
+    background:repeating-linear-gradient(to bottom, transparent, transparent 20px, #ddd 20px, #ddd 21px);
+    line-height:20px;
+  }
+  input:focus,textarea:focus{
+    background-color:#F8F4EE;
+  }
+  input[type=submit]{
+    color: #000000;
+    cursor:pointer;
+    position:relative;
+    text-transform: uppercase;
+  }
+  input:hover[type=submit] {
+    color: #435c70;
+    background-color:#F8F4EE;
+  }
+  .envelope:hover .back{
+    transform: rotateX(180deg);
+  }
+  .envelope:hover .letter{
+    top:-300px;
+    height:500px;
+  }
+  .letter:hover input[type=submit]{
+    z-index:10;
+    transition: all .5s ease-in-out;
   }
   
-  .contact-section {
-    margin-bottom: 80px;
-  }
-  
-  .contact-section:last-child {
-    margin-bottom: 0px;
-  }
-  
-  .contact-section h1 {
-    font-size: 32px;
-  }
-  
-  .contact-section h2 {
-    font-size: 26px;
-  }
-  
-  .contact-section p {
-    margin-bottom: 25px;
-    font-size: 18px;
-    line-height: 26px;
-  }
-  
-  .contact-section ul {
-    padding: 0;
-    font-size: 18px;
-  }
-  
-  .contact-section ul li {
-    padding-left: 24px;
-    margin-left: 24px;
-    position: relative;
-    list-style-type: none;
-    margin-bottom: 10px;
-    line-height: 24px;
-  }
-  
-  .contact-section ul li:before {
-    content: "\2022 ";
-    position: absolute;
-    left: 0;
-    color: #929292;
-    font-size: 22px;
-    line-height: 1.1;
-  }
-  
-  .contact-section ul li a {
-    color: #5183f5;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 2px solid #e2eafd;
-  }
-  
-  .contact-section ul li a:hover {
-    color: #2161f2;
-    background: #f0f4fe;
-    border-bottom: 2px solid #2161f2;
-  }
-  
-  @media only screen and (max-width: 600px) and (min-width: 0px) {
-    .contact-section {
-      margin-bottom: 50px;
-    }
-  
-    .contact-section h1 {
-      font-size: 24px;
-    }
-  
-    .contact-section h2 {
-      font-size: 18px;
-    }
-  
-    .contact-section p {
-      margin-bottom: 15px;
-      font-size: 16px;
-      line-height: 22px;
-    }
-  
-    .contact-section ul {
-      font-size: 13.5px;
-    }
-  
-    .contact-section ul li {
-      padding-left: 18px;
-      margin-left: 8px;
-      margin-bottom: 10px;
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .label{
+      font-size: 20px;
     }
   }

@@ -7,14 +7,13 @@ export default class extends Component {
                 <div className="header-container">
                     <div className="header-logo">
                         <a href="/">
-                        <span className="header-logo-icon">✍︎</span>
-                        <span className="header-logo-text">Philip Franzén</span>
+                        <span className="header-logo-text">PHILIP FRANZÉN.</span>
                         </a>
                     </div>
                     <div className="header-links">
-                    <a href="/blog">Blog</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
+                    <a className="btn-top-links" href="/blog">Articles</a>
+                    <a className="btn-top-links" href="/about">About</a>
+                    <a className="btn-top-links" href="/contact">Contact</a>
                     </div>
                 </div>
             </header>

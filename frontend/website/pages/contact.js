@@ -14,9 +14,24 @@ export default class extends Component {
         />
         <Header />
         <div className="contact-container">
-
-          . . .
-
+          <div class="envelope" title="">
+            <div class="back"></div>
+              <form class="letter">
+                <p>
+                  <label>Name:</label>
+                    <input type="text" name="name" />
+                </p>
+                <p>
+                  <label>Email:</label>
+                  <input type="email" name="email" />
+                </p>
+              <p>
+                <label>Message:</label>
+                <textarea></textarea>
+              </p>
+            <input type="submit" value="Send"/>
+           </form>
+          </div>
         </div>
         <Footer />
       </div>
