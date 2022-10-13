@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000
 
 const app = express()
 
-const mongoString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@pf-blog.mydrz.mongodb.net/pf-blog?retryWrites=true&w=majority`
+const mongoString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@pf-blog.mydrz.mongodb.net/?retryWrites=true&w=majority`
 
 mongoose.connect(mongoString, {useNewUrlParser: true, useUnifiedTopology: true})
 

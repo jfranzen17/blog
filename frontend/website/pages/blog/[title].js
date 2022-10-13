@@ -35,7 +35,7 @@ export default class extends Component {
         <Header />
         <div className="blog-post-container">
           {
-            this.props.post ?
+            this.props.post && !this.props.getDataError && !this.props.notFoundError ?
             <>
               <div className="blog-post-top-section">
                 <h1>{this.props.post.title}</h1>

@@ -8,6 +8,7 @@ export default class extends Component {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{this.props.title}</title>
         <meta name="description" content={this.props.metaDescription} />
+        <meta name="google-site-verification" content={process.env.GOOGLE_VERIFICATION_ID} />
       </Head>
     )
   }
