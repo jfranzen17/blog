@@ -8,7 +8,7 @@
     "start": "NODE_ENV=production node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "git_username <jfranzen17.com>",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
